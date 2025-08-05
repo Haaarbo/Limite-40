@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5hsv8scselpi"]
+
+[ext_resource type="Script" uid="uid://pmu34ge6fs36" path="res://scripts/start_screen.gd" id="1_u80x2"]
+[ext_resource type="Texture2D" uid="uid://caa3qcubcsmdf" path="res://icon.svg" id="2_bodal"]
+
+[node name="Start" type="Node"]
+
+[node name="StartController" type="Node2D" parent="."]
+script = ExtResource("1_u80x2")
+
+[node name="StartScn" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="BG" type="ColorRect" parent="StartScn"]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="PlayBtn" type="Button" parent="StartScn"]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 342.0
+offset_right = 624.0
+offset_bottom = 407.0
+text = "PLAY"
+
+[node name="QuitBtn" type="Button" parent="StartScn"]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 438.0
+offset_right = 624.0
+offset_bottom = 503.0
+text = "QUIT"
+
+[node name="Title" type="TextEdit" parent="StartScn"]
+offset_left = 313.0
+offset_top = 110.0
+offset_right = 770.0
+offset_bottom = 255.0
+theme_override_font_sizes/font_size = 100
+text = "Limite-40"
+
+[node name="Icon" type="Sprite2D" parent="StartScn"]
+position = Vector2(309, 371)
+texture = ExtResource("2_bodal")
+
+[connection signal="pressed" from="StartScn/PlayBtn" to="StartController" method="_on_play_btn_pressed"]
+[connection signal="pressed" from="StartScn/QuitBtn" to="StartController" method="_on_quit_btn_pressed"]
