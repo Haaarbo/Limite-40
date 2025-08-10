@@ -15,6 +15,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="BG" type="ColorRect" parent="StartScn"]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
@@ -35,6 +36,7 @@ offset_bottom = 503.0
 text = "QUIT"
 
 [node name="Title" type="TextEdit" parent="StartScn"]
+layout_mode = 0
 offset_left = 313.0
 offset_top = 110.0
 offset_right = 770.0

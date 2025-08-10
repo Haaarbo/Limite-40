@@ -5,13 +5,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ccstn"]
 size = Vector2(120, 123)
 
-[node name="Pedestrian" type="Node2D"]
+[node name="Pedestrian" type="Area2D"]
 
 [node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 0, 1)
 texture = ExtResource("1_vp5dr")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -0.5)
+[node name="pedeCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ccstn")
