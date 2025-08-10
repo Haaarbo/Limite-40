@@ -23,12 +23,14 @@ func _physics_process(delta: float) -> void:
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jux3i"]
 size = Vector2(28, 31)
 
-[node name="Char" type="CharacterBody2D"]
+[node name="Pedestre" type="CharacterBody2D"]
 scale = Vector2(5, 5)
 script = SubResource("GDScript_jux3i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4, -9.5)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_jux3i")
 
 [node name="StackedSprite" parent="." instance=ExtResource("1_jux3i")]
+rotate_sprites = true
