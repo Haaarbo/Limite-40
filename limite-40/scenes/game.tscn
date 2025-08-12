@@ -43,3 +43,10 @@ script = null
 [node name="Carro" parent="." instance=ExtResource("3_lnu2h")]
 position = Vector2(-172, 314)
 scale = Vector2(5, 5)
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
