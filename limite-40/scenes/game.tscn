@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dltp86xteigvo"]
+[gd_scene load_steps=5 format=3 uid="uid://dltp86xteigvo"]
 
 [ext_resource type="PackedScene" uid="uid://mdxf4cj72fk5" path="res://scenes/road.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bsi6wiani5oh3" path="res://scenes/pedestre.tscn" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://d3m30d5ows85b" path="res://scenes/carro.tscn" id="3_lnu2h"]
+
+[sub_resource type="Curve2D" id="Curve2D_lnu2h"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 224, 0, 0, 0, 0, 1152, 224, 0, 0, 0, 0, 1152, 464, 0, 0, 0, 0, 0, 464, 0, 0, 0, 0, 0, 224)
+}
+point_count = 5
 
 [node name="GameController" type="Node2D"]
 
@@ -37,16 +43,23 @@ color = Color(0.87451, 0.521569, 0.317647, 1)
 position = Vector2(1, 7)
 
 [node name="Pedestre" parent="." instance=ExtResource("3_lbhrr")]
+visible = false
 position = Vector2(592, 618)
 script = null
 
 [node name="Carro" parent="." instance=ExtResource("3_lnu2h")]
+visible = false
 position = Vector2(-172, 314)
 scale = Vector2(5, 5)
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 0.5
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="CarPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_lnu2h")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="CarPath"]
+position = Vector2(0, 224)
