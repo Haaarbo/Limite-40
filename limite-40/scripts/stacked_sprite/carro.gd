@@ -1,7 +1,9 @@
-extends "res://scripts/stacked_sprite/movement_rotation.tres.gd"
+extends "res://scripts/pedestre.tres.gd"
 
 func _ready() -> void:
 	stsp = $Sprite2D
+	SPEED = 500
+	velocity = Vector2(SPEED, 0)
 
 
 func _on_visible_screen_exited() -> void:
