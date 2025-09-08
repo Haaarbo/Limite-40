@@ -21,4 +21,5 @@ rotate_sprites = true
 
 [node name="visible" type="VisibleOnScreenNotifier2D" parent="."]
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_exited" from="visible" to="." method="_on_visible_screen_exited"]

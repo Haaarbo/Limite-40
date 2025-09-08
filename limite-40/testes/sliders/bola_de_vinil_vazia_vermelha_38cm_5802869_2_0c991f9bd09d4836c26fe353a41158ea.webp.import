@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmdxgta140i8c"
-path="res://.godot/imported/bola_de_vinil_vazia_vermelha_38cm_5802869_2_0c991f9bd09d4836c26fe353a41158ea.webp-cbd074f4dc7d341fb94bbdb600d3f6d6.ctex"
+path="res://.godot/imported/bola_de_vinil_vazia_vermelha_38cm_5802869_2_0c991f9bd09d4836c26fe353a41158ea.webp-5914da3fadbca89efc3694e1baf59563.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://testes/bola_de_vinil_vazia_vermelha_38cm_5802869_2_0c991f9bd09d4836c26fe353a41158ea.webp"
-dest_files=["res://.godot/imported/bola_de_vinil_vazia_vermelha_38cm_5802869_2_0c991f9bd09d4836c26fe353a41158ea.webp-cbd074f4dc7d341fb94bbdb600d3f6d6.ctex"]
+source_file="res://testes/sliders/bola_de_vinil_vazia_vermelha_38cm_5802869_2_0c991f9bd09d4836c26fe353a41158ea.webp"
+dest_files=["res://.godot/imported/bola_de_vinil_vazia_vermelha_38cm_5802869_2_0c991f9bd09d4836c26fe353a41158ea.webp-5914da3fadbca89efc3694e1baf59563.ctex"]
 
 [params]
 

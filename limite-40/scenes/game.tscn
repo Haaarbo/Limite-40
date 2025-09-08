@@ -65,7 +65,8 @@ rotates = false
 curve = SubResource("Curve2D_iywne")
 
 [node name="PedestrianFollow" type="PathFollow2D" parent="PedestrianPath"]
-position = Vector2(544, 160)
+position = Vector2(579.676, 160)
+progress = 35.676
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 2.0
