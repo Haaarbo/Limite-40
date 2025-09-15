@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmfjk75vdq80d"]
+
+[ext_resource type="Script" uid="uid://b1tk1ocyp4lle" path="res://scripts/game_over.gd" id="1_wqhvx"]
+[ext_resource type="Texture2D" uid="uid://dxxo7f45rnsmb" path="res://assets/imgs/go.jpg" id="2_tbwuq"]
+
+[node name="game_over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wqhvx")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+
+[node name="BG" type="TextureRect" parent="RichTextLabel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tbwuq")
+expand_mode = 2
+
+[node name="GameOverTxt" type="Label" parent="RichTextLabel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -183.5
+offset_top = 24.0
+offset_right = 183.5
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "GAME OVER"
