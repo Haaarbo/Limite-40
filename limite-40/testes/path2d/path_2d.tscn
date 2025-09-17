@@ -5,28 +5,48 @@
 
 [sub_resource type="Curve2D" id="Curve2D_gw43d"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 128, 128, 0, 0, 0, 0, 1024, 128)
+"points": PackedVector2Array(0, 0, 0, 0, 128, 127, 0, 0, 0, 0, 1024, 128)
 }
 point_count = 2
 
 [node name="Path2D" type="Path2D"]
+position = Vector2(0, 131)
 curve = SubResource("Curve2D_gw43d")
 script = ExtResource("1_7huek")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 128.0
 offset_top = 128.0
-offset_right = 1016.0
+offset_right = 1023.0
 offset_bottom = 144.0
-color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-position = Vector2(576, 128)
+position = Vector2(576, 127.5)
+rotation = 0.00111607
 progress = 448.0
 loop = false
 
-[node name="Icon" type="Sprite2D" parent="PathFollow2D"]
-texture = ExtResource("2_v4nrq")
+[node name="rel" type="Label" parent="PathFollow2D"]
+texture_filter = 1
+offset_left = -38.2081
+offset_top = -186.457
+offset_right = 39.7919
+offset_bottom = -117.457
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="PathFollow2D"]
+offset_left = -7.0
+offset_top = -117.0
+offset_right = 7.0
+offset_bottom = -1.0
+pivot_offset = Vector2(7, 116)
+metadata/_edit_use_anchors_ = true
 
 [node name="Pessoas" type="Sprite2D" parent="."]
 modulate = Color(0, 1, 0, 1)
@@ -37,3 +57,29 @@ texture = ExtResource("2_v4nrq")
 modulate = Color(1, 0, 0, 1)
 position = Vector2(1088, 128)
 texture = ExtResource("2_v4nrq")
+
+[node name="nunPessoas" type="Label" parent="."]
+texture_filter = 1
+offset_left = 23.0
+offset_top = -3.0
+offset_right = 101.0
+offset_bottom = 66.0
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="nunCarros" type="Label" parent="."]
+texture_filter = 1
+offset_left = 1053.0
+offset_top = -1.0
+offset_right = 1131.0
+offset_bottom = 68.0
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
