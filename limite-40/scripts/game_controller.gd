@@ -3,13 +3,6 @@ extends Node2D
 @export var pedestrian_scene: PackedScene
 @export var car_scene: PackedScene
 
-#
-var pessoas = 0
-var carros = 0
-
-var media = carros - pessoas
-
-
 #Ao iniciar o game
 func _on_start_timer_timeout() -> void:
 	$PedestrianTimer.start()

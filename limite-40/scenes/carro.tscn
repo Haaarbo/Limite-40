@@ -4,13 +4,14 @@
 [ext_resource type="Script" uid="uid://c4k15eaixdl54" path="res://scripts/stacked_sprite/carro.gd" id="1_yv50d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yv50d"]
-size = Vector2(12, 28)
+size = Vector2(12, 14)
 
 [node name="Carro" type="Area2D"]
 scale = Vector2(5, 5)
 script = ExtResource("1_yv50d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yv50d")
 
 [node name="Sprite2D" parent="." instance=ExtResource("1_wjxk8")]

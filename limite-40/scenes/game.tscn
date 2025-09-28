@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://mdxf4cj72fk5" path="res://scenes/road.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bsi6wiani5oh3" path="res://scenes/pedestre.tscn" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://d3m30d5ows85b" path="res://scenes/carro.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://1onqhkj5pvg8" path="res://testes/path2d/path_2d.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://1onqhkj5pvg8" path="res://scenes/sliderCene.tscn" id="5_iywne"]
 
 [sub_resource type="Curve2D" id="Curve2D_lbhrr"]
 _data = {
@@ -81,7 +81,7 @@ autostart = true
 wait_time = 1.5
 autostart = true
 
-[node name="Path2D" parent="." instance=ExtResource("5_iywne")]
+[node name="sliderUI" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(792, 56)
 scale = Vector2(0.3, 0.3)
 
