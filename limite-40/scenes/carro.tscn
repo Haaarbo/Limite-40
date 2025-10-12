@@ -6,12 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yv50d"]
 size = Vector2(12, 14)
 
-[node name="Carro" type="Area2D"]
+[node name="Carro" type="Area2D" groups=["Carro"]]
 scale = Vector2(5, 5)
 script = ExtResource("1_yv50d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yv50d")
 
 [node name="Sprite2D" parent="." instance=ExtResource("1_wjxk8")]

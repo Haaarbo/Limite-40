@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jux3i"]
 size = Vector2(28, 31)
 
-[node name="Pedestre" type="Area2D"]
+[node name="Pedestre" type="Area2D" groups=["Pedestre"]]
 position = Vector2(479, 307)
 scale = Vector2(5, 5)
 script = ExtResource("1_2amh1")
