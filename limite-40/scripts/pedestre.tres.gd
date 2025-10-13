@@ -18,13 +18,11 @@ func _process(delta: float) -> void:
 	#if input != Vector2.ZERO:
 	stsp.set_rotation_sprites(velocity.angle() - deg_to_rad(90))
 
+
 func _on_visible_screen_exited() -> void:
 	get_node("/root/GameController/sliderUI").aplyValue(1, get_groups())
 	queue_free()
 
 
 func _on_area_entered(area: Area2D) -> void:
-	# Pontua para o carro ao ser atropelado.
-	if name == 'Pedestre':
-		get_node("/root/GameController/sliderUI").aplyValue(0, get_groups())
 	queue_free()
