@@ -1,25 +1,72 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsi6wiani5oh3"]
+[gd_scene load_steps=10 format=3 uid="uid://b7gldj6jixrty"]
 
-[ext_resource type="Script" uid="uid://dy7q8yerq3xvf" path="res://scripts/pedestre.tres.gd" id="1_2amh1"]
-[ext_resource type="PackedScene" uid="uid://kv0l8ikdp6h2" path="res://scenes/stacked_sprite.tscn" id="1_jux3i"]
+[ext_resource type="Script" uid="uid://b2t0osb4d3fi6" path="res://scripts/pedestre.gd" id="1_2amh1"]
+[ext_resource type="Texture2D" uid="uid://dlm5dbeisku68" path="res://assets/sprites/kenney_rpgUrbanKit/Tiles/tile_0024.png" id="2_fyk7h"]
+[ext_resource type="Texture2D" uid="uid://cni726u3la6n" path="res://assets/sprites/kenney_rpgUrbanKit/Tiles/tile_0051.png" id="3_oiyv1"]
+[ext_resource type="Texture2D" uid="uid://4snllydx7l4o" path="res://assets/sprites/kenney_rpgUrbanKit/Tiles/tile_0078.png" id="4_0jh73"]
+[ext_resource type="Texture2D" uid="uid://b4h82ulaxdgfj" path="res://assets/sprites/kenney_rpgUrbanKit/Tiles/tile_0025.png" id="5_eajut"]
+[ext_resource type="Texture2D" uid="uid://5fwn1b1vc47l" path="res://assets/sprites/kenney_rpgUrbanKit/Tiles/tile_0052.png" id="6_4061m"]
+[ext_resource type="Texture2D" uid="uid://fuhgxl0idrgk" path="res://assets/sprites/kenney_rpgUrbanKit/Tiles/tile_0079.png" id="7_wyusp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jux3i"]
-size = Vector2(28, 31)
+[sub_resource type="SpriteFrames" id="SpriteFrames_wyusp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fyk7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oiyv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fyk7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0jh73")
+}],
+"loop": true,
+"name": &"down",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_eajut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4061m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eajut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wyusp")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8cbq"]
+size = Vector2(10.2857, 13.1429)
 
 [node name="Pedestre" type="Area2D" groups=["Pedestre"]]
-position = Vector2(479, 307)
-scale = Vector2(5, 5)
+scale = Vector2(3.5, 3.5)
 script = ExtResource("1_2amh1")
+
+[node name="animPedestre" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wyusp")
+animation = &"down"
+frame_progress = 0.0391999
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-4, -9.5)
-shape = SubResource("RectangleShape2D_jux3i")
-
-[node name="StackedSprite" parent="." instance=ExtResource("1_jux3i")]
-rotate_sprites = true
+position = Vector2(1.36239e-07, 1.42857)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_r8cbq")
 
 [node name="visible" type="VisibleOnScreenNotifier2D" parent="."]
+visible = false
+position = Vector2(-0.588488, -0.103896)
+scale = Vector2(1.0823, 1.35065)
+rect = Rect2(-5, -5, 11, 11)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="screen_exited" from="visible" to="." method="_on_visible_screen_exited"]

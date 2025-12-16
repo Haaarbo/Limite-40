@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var pedestrian_scene: PackedScene
-@export var car_scene: PackedScene
+var pedestrian_scene: PackedScene = preload("res://scenes/pedestre.tscn")
+var car_scene: PackedScene = preload("res://scenes/carro.tscn")
 
 #Ao iniciar o game
 func _on_start_timer_timeout() -> void:
