@@ -58,15 +58,14 @@ animation = &"down"
 frame_progress = 0.0391999
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(1.36239e-07, 1.42857)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_r8cbq")
 
 [node name="visible" type="VisibleOnScreenNotifier2D" parent="."]
-visible = false
 position = Vector2(-0.588488, -0.103896)
 scale = Vector2(1.0823, 1.35065)
 rect = Rect2(-5, -5, 11, 11)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="visible" to="." method="_on_visible_screen_exited"]

@@ -10,17 +10,18 @@ region = Rect2(293, 266, 22, 22)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pkkf7"]
 
 [node name="Carro" type="Area2D" groups=["Carro"]]
-scale = Vector2(6.04733, 6.04733)
+scale = Vector2(4.19643, 4.19643)
 script = ExtResource("1_hyuwt")
 
 [node name="carSprite" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_2b6jv")
 
+[node name="carCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pkkf7")
+
 [node name="visible" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(-1.13687e-13, 5.96046e-08)
 scale = Vector2(1.1, 1.5)
 
-[node name="carCollision" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_pkkf7")
-
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="visible" to="." method="_on_visible_screen_exited"]
